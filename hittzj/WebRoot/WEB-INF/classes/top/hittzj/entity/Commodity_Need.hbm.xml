@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="top.hittzj.entity">
+
+	<class name="Commodity_Need" table="Commodity_Need"
+		dynamic-update="true">
+
+		<id name="id" column="id">
+			<generator class="native" />
+		</id>
+
+		<property name="name" column="name_" type="string" length="15" not-null="true"
+			></property>
+		<property name="money" column="money" type="string" length="10"></property>
+		<property name="number" column="number" type="string" length="10"></property>
+		<property name="desc" column="desc_" type="string" length="100"></property>
+		<property name="img" column="img" type="string" length="100"></property>
+		<property name="location" column="location" type="string"
+			length="40"></property>
+		<property name="time" column="time" type="timestamp"
+			not-null="true"></property>
+
+		<!-- 所有者 -->
+		<many-to-one name="user" column="userid" class="User" lazy="false"
+			not-null="true"></many-to-one>
+		<!-- 收藏者 -->
+		<set name="collectors" table="User_CN">
+			<key column="cnid" />
+			<many-to-many column="uid" class="User"></many-to-many>
+		</set>
+
+	</class>
+
+</hibernate-mapping>
