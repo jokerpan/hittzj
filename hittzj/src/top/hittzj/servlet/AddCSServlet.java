@@ -124,14 +124,14 @@ public class AddCSServlet extends HttpServlet {
 									"/");
 							// System.out.println(path);
 							// 得到完整的路径
-							String completePath = rootPath + "s_img\\"
-									+ fileName + ".jpg";
-							// System.out.println("路径" + completePath);
+							String completePath = rootPath +"/"+"s_img/"+
+									 fileName + ".jpg";
+							// System.out.println("路径" + completePath);	
 							File file = new File(completePath);
 							file.createNewFile();
 							item.write(file);
 							item.delete();
-							relativePath = "s_img\\" + fileName + ".jpg";
+							relativePath = "s_img/" + fileName + ".jpg";
 							// System.out.println(relativePath);
 						}
 					}

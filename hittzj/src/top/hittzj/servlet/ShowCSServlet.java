@@ -25,7 +25,7 @@ public class ShowCSServlet extends HttpServlet {
 
 		// 得到接下来要去哪一页
 		String nextPage_ = request.getParameter("nextPage");
-		if (nextPage_ == null) {
+		if (nextPage_ == null||"".equals(nextPage_)) {
 			nextPage_ = "1";
 		}
 		int nextPage = Integer.parseInt(nextPage_);

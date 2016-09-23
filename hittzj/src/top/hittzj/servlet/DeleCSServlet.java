@@ -95,7 +95,7 @@ public class DeleCSServlet extends HttpServlet {
 		File file = new File(rootPath + img);
 		boolean deleteFile = file.delete();
 		if (!deleteFile) {
-			request.setAttribute("ModifyCNResult", "É¾³ýÊ§°Ü");
+			request.setAttribute("modifyCNResult", "É¾³ýÊ§°Ü");
 			request.getRequestDispatcher("/index.jsp").forward(request,
 					response);
 			return;

@@ -17,11 +17,11 @@
     <h1>修改求购</h1>  
   </div>  
   <div class="ui-content"> 
-    <img src="img/head.png" width="100%" />
+    <img src="${requestScope.thisCN.img}" width="100%" />
     <div class="file-box">  
         <form id="addcn-form" action="ModifyCN" method="post" enctype="multipart/form-data"  data-ajax="false">  
             <p style="font-size:13px;">商品id：</p>
-            <input type="text" name="CNId" value="${requestScope.thisCN.id }" placeholder=" placeholder="${requestScope.thisCN.id }" readonly="true" />
+            <input type="text" name="CNId" value="${requestScope.thisCN.id }" placeholder=" placeholder="id" readonly="true" />
             <p style="font-size:13px;">商品名字：</p>
             <p style="font-size:12px;color:red;" id="addcn-p"></p>
             <input type="text" id="addcn-name" name="name" placeholder="商品名字" maxlength="15" value="${requestScope.thisCN.name }" />

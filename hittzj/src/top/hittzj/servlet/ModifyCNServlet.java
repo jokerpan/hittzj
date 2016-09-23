@@ -149,12 +149,12 @@ public class ModifyCNServlet extends HttpServlet {
 			ModifyCNService service = new ModifyCNService();
 			boolean change = service.modify(cn);
 			if (change) {
-				request.setAttribute("ModifyCNResult", "修改成功");
+				request.setAttribute("modifyCNResult", "修改成功");
 				request.getRequestDispatcher("/index.jsp").forward(request,
 						response);
 				return;
 			} else {
-				request.setAttribute("ModifyCNResult", "修改失败");
+				request.setAttribute("modifyCNResult", "修改失败");
 				request.getRequestDispatcher("/index.jsp").forward(request,
 						response);
 				return;

@@ -1,0 +1,419 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+html,body{
+	height: 100%;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+ul{
+	list-style: none;
+}
+img { max-width: 100%;}
+.menu{
+	width: 100%;
+	height: 50px;
+	margin: 0 auto;
+	position: fixed;
+	bottom: 0;
+}
+.menu .menu-btn{
+	width: 50px;
+	height: 50px;
+	margin: 0 auto;
+	background-color: #000;
+	border-radius: 50%;
+	bottom: 20px;
+}
+.menu .menu-list{
+	display: none;
+	box-sizing: border-box;
+	font-size: 22px;
+	position: fixed;
+	bottom: 25px;
+	margin-left: 10%;
+	width: 40%;
+	height: 350px;
+	background-color: rgba(0, 0, 0, 0.5)
+}
+.menu .menu-list li{
+	margin-bottom: 6px;
+}
+.menu .menu-list .menu-name{
+	padding-top: 10px;
+	font-size: 24px;
+	color: #fff;
+	text-align: center;
+	margin-bottom: 15px;
+}
+.menu .menu-list li a{
+	color: #000;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #fff;  
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #fff
+}
+.over{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+}
+.tempContiner{
+	position: fixed;
+	width: 100%;
+	margin-right: 0;
+	margin-left: 0;
+	text-align: center;
+	z-index: 101;
+}
+
+
+.myalert{ 
+	background:rgba(255,255,255,0.7); 
+	padding:0 20px; 
+	height:50px; 
+	display:inline-block; 
+	line-height:50px; 
+	text-align:center; 
+	color:#000; 
+	border-radius:4px; 
+	position:absolute; 
+	top:0; 
+	left:0; 
+	display:none;
+}
+.login-continer{
+	overflow-y: scroll;
+	font-size: 26px;
+	color: #fff;
+	height: 100%;
+	width: 100%;
+	background: url('../img/bg.jpg') repeat-y;
+	background-size: cover;  //只支持IE9+  
+	-webkit-background-size: cover; //webkit核心  
+	-moz-background-size: cover; //FF核心  
+	-o-background-size: cover; //欧朋
+}
+.login-form{
+	position: absolute;
+	top: 40%;
+	width: 100%;
+	height: 160px;
+}
+.login-form .login-input{
+	height: 45px;
+	width: 100%;
+}
+.login-form .login-input *{
+	height: 45px;
+	border: none;
+	line-height: 45px;
+	background: #000;
+	float: left;
+}
+.login-form .login-input .login-user{
+	text-align: right;
+}
+.login-form .login-input{
+	margin: 0 auto;
+	width: 90%;
+	-webkit-box-shadow: 0px 30px 50px #000;
+    -moz-box-shadow: 0px 30px 50px #000;
+    box-shadow: 0px 30px 50px #000;
+}
+.login-form .login-input input{
+	font-size: 23px;
+	color: #fff;
+	width: 42.5%;
+}
+.login-form .login-input p{
+	font-size: 23px;
+	width: 15%;
+	text-align: center;
+}
+.login-form .login-img{
+	width: 150px;
+	height: 150px;
+	margin: 20px auto;
+	border-radius: 50%;
+}
+.login-foot{
+	position: absolute;
+	bottom: 5px;
+	height: 30px;
+	width: 95%;
+	margin-right: 5%;
+	text-align: right;
+}
+.login-foot a{
+	text-decoration: none;
+	font-size: 16px;
+	color: #000;
+}
+.register-h1{
+	color: #000;
+	font-size: 30px;
+	margin-bottom: 17px;
+}
+.register-continer{
+	width: 90.8%;
+	margin: 0 auto;
+	margin-top: 5%;
+	margin-bottom: 50px;
+}
+.register-form .register-div{
+	box-sizing: border-box;
+	font-size: 12px;
+	background-color: #000;
+	color: gray;
+	width: 100%;
+	padding-left: 10%;
+	height: 43px;
+	line-height: 43px;
+	margin-bottom: 24px;
+}
+.register-form p{
+	color: red;
+	font-size: 12px;
+}
+.register-form .register-div input{
+	float: right;
+	font-size: 16px;
+	color: #fff;
+	border: none;
+	width: 70%;
+	height: 43px;
+	background-color: #000;
+}
+.register-form .register-div select{
+	float: right;
+	font-size: 16px;
+	color: #fff;
+	border: none;
+	width: 70%;
+	height: 43px;
+	background-color: #000;
+}
+.register-form .register-sub{
+	margin: 50px 0;
+	width: 100%;
+}
+.register-form .register-sub input{
+	border: none;
+	width: 100%;
+	text-align: center;
+	background-color: #000;
+	color: #fff;
+	height: 43px;
+	line-height: 43px;
+	font-size: 26px;
+}
+.index{
+	position: relative;
+}
+.index-back{
+	font-size: 20px;
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.index-solr{
+	color: #fff;
+	font-size: 22px;
+	background-color: #000;
+	width: 60%;
+	height: 45px;
+	line-height: 45px;
+	border: none;
+	position: absolute;
+	top: 50px;
+	left: 4.5%;
+}
+.index-btn{
+	color: #fff;
+	font-size: 22px;
+	background: #292626;
+	width: 20%;
+	height: 45px;
+	border: none;
+	position: absolute;
+	top: 50px;
+	right: 4.5%;
+}
+.index-btn1{
+	color: #fff;
+	font-size: 22px;
+	background: #292626;
+	width: 20%;
+	height: 45px;
+	border: none;
+	position: absolute;
+	top: 50px;
+	right: 24.5%;
+}
+.index-shoe{
+	width: 30%;
+	height: 115px;
+	top: 120px;
+	left: 10%;
+}
+.index-shoe a{
+	position: absolute;
+	top: 20px;
+	left: 30%;
+}
+.index-cloth{
+	width: 40%;
+	height: 60px;
+	top: 140px;
+	right: 12%;
+}
+.index-cloth a{
+    position: absolute;
+    left: 50%;
+}
+.index-cloth .man{
+	top: 0;
+}
+.index-cloth .woman{
+	top: 20px;
+}
+.index-cloth .bag{
+	top: 40px;
+}
+.index-game{
+	width: 80%;
+	height: 120px;
+	left: 10%;
+	top: 250px;
+}
+.index-game a{
+	position: absolute;
+	bottom: 15px;
+}
+.index-game .shuma{
+	left: 15%;
+}
+.index-game .game{
+	left: 50%;
+}
+.index-sport{
+	width: 60%;
+	height: 50px;
+	top: 380px;
+	right: 5%;
+}
+.index-sport a{
+	position: absolute;
+	top: 15px;
+	left: 50%;
+}
+.index-book{
+	width: 40%;
+	height: 50px;
+	left: 5.5%;
+	top: 440px;
+}
+.index-book a{
+	position: absolute;
+	top: 15px;
+	left: 50%;
+}
+.index-other{
+	width: 40%;
+	height: 80px;
+	position: absolute;
+	top: 115px;
+	left: 4.5%;
+}
+.index .index-back a{
+	color: #fff;
+}
+.lang-title{
+	font-size: 30px;
+	background-color: rgba(0, 0, 0, 0.7);
+	color: #fff;
+	width: 45%;
+	height: 50px;
+	line-height: 50px;
+}
+.center-a{
+	width: 100%;
+	height: 20px;
+	text-align: right;
+	color: #000;
+	font-size: 16px;
+}
+.center .center-info{
+	height: 200px;
+	width: 75%;
+	margin: 25px auto;
+}
+.center .center-info p{
+	float: left;
+	width: 50%;
+	text-align: center;
+	font-size: 18px;
+	color: #000;
+	margin-bottom: 10px;
+}
+.centerChange{
+	text-align: center;
+	margin-top: 100px;
+	background-color: #fff;
+	width: 100%;
+	height: 300px;
+}
+.centerChange tr{
+	width: 100%;
+}
+.centerChange tr th{
+	width: 50%;
+	font-size: 20px;
+	font-weight: normal;
+	border-bottom: 1px solid #000;
+}
+.centerChange tr td{
+	width: 50%;
+	border-right: none;
+	border-bottom: 1px solid #000;
+}
+.centerChange td input{
+	width: 100%;
+	text-align: center;
+	font-size: 16px;
+	border: none;
+}
+.center-sub{
+	margin-top: 50px;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	background: #000;
+	color: #fff;
+	font-size: 26px;
+}
+#list li{background:#f1efef;width:100%;height:102px;margin-bottom:20px; border: solid 1px #000;border-right: none;border-left: none;}
+#list li img{float:left;border:1px solid #000;}
+#list li div{float:left;}
+#list li div p{color:#000;font-size:16px;margin-bottom:6px;}
+#list li div h4{font-size:20px;color:#000;margin-bottom:6px;text-align:center;font-family: "����";}
+#list li div p strong{color:green;font-size:23px;}
+#list li div p small{color:blue;}
+
+
+
+#list2 li{background:#f1efef;width:100%;height:102px;margin-bottom:20px; border: solid 1px #000;border-right: none;border-left: none;}
+#list2 li img{float:left;border:1px solid #000;}
+#list2 li div{float:left;width:60%;}
+#list2 li div p{color:#000;font-size:16px;margin-bottom:5px;}
+#list2 li div h4{font-size:18px;color:#000;margin-bottom:5px;text-align:center;font-family: "黑体";}
+#list2 li div p strong{color:green;font-size:23px;}
+#list2 li div p small{color:blue;}

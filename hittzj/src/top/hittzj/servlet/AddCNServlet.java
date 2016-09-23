@@ -95,14 +95,14 @@ public class AddCNServlet extends HttpServlet {
 										.getRealPath("/");
 								// System.out.println(path);
 								// 得到完整的路径
-								String completePath = rootPath + "n_img\\"
+								String completePath = rootPath +"/"+"n_img/"
 										+ fileName + ".jpg";
 								// System.out.println("路径" + completePath);
 								File file = new File(completePath);
 								file.createNewFile();
 								item.write(file);
 								item.delete();
-								relativePath = "n_img\\" + fileName + ".jpg";
+								relativePath = "n_img/" + fileName + ".jpg";
 								// System.out.println(relativePath);
 							}
 						}

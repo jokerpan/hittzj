@@ -26,7 +26,7 @@ public class ShowCNByUserServlet extends HttpServlet {
 			throws ServletException, IOException {
 		// µÃµ½Ò³Êý
 		String page_ = request.getParameter("nextPage");
-		if (page_ == null) {
+		if (page_ == null||"".equals(page_)) {
 			page_ = "1";
 		}
 		int nextPage = Integer.parseInt(page_);

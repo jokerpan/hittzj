@@ -16,11 +16,11 @@
     <h1>修改卖品</h1>  
   </div>  
   <div class="ui-content"> 
-    <img src="img/head.png" width="100%" />
+    <img src="${requestScope.thisCN.img}" width="100%" />
     <div class="file-box">  
         <form id="addcs-form" method="post" enctype="multipart/form-data"  data-ajax="false">  
             <p style="font-size:13px;">商品编号：</p>
-            <input type="text" name="CSId" value="${requestScope.thisCS.id }" placeholder="${requestScope.thisCS.id }" readonly="true" />
+            <input type="text" name="CSId" value="${requestScope.thisCS.id}" placeholder="${requestScope.thisCS.id }" readonly="true" />
             <p style="font-size:13px;">商品种类：</p>
             <select name="typeId">
               <option value="1">男装</option>

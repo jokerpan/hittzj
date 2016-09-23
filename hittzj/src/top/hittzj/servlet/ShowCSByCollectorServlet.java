@@ -34,6 +34,9 @@ public class ShowCSByCollectorServlet extends HttpServlet {
 		}
 		TzjList<Commodity_Sell> list = new TzjList<Commodity_Sell>();
 		String page = request.getParameter("nextPage");
+		if (page == null||"".equals(page)) {
+			page = "1";
+		}
 		int currentPage = Integer.parseInt(page);
 		list.setCurrentPage(currentPage);
 		GetCSByCollectorService service = new GetCSByCollectorService();

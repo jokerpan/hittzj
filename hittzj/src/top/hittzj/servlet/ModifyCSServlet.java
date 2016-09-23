@@ -156,12 +156,12 @@ public class ModifyCSServlet extends HttpServlet {
 					}
 				}
 			} catch (FileUploadException e) {
-				request.setAttribute("ModifyCNResult", "文将上传失败");
+				request.setAttribute("modifyCNResult", "文将上传失败");
 				request.getRequestDispatcher("/index.jsp").forward(request,
 						response);
 				return;
 			} catch (Exception e) {
-				request.setAttribute("ModifyCNResult", "文将上传失败");
+				request.setAttribute("modifyCNResult", "文将上传失败");
 				request.getRequestDispatcher("/index.jsp").forward(request,
 						response);
 				return;

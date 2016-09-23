@@ -26,7 +26,7 @@ public class ShowCSByTypeServlet extends HttpServlet {
 		TzjList<Commodity_Sell> list = new TzjList<Commodity_Sell>();
 		// µÃµ½Ò³Êý
 		String page = request.getParameter("nextPage");
-		if (page == null) {
+		if (page == null||"".equals(page)) {
 			page = "1";
 		}
 		int nextPage = Integer.parseInt(page);

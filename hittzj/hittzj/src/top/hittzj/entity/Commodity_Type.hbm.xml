@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="top.hittzj.entity">
+
+	<class name="Commodity_Type" table="Commodity_Type">
+
+		<id name="id" column="id">
+			<generator class="native" />
+		</id>
+		
+		<property name="name" column="name" type="string" length="8" unique="true" not-null="true"></property>
+		
+		<!-- 该类的型商品 -->
+		<set name="commodity_Sell" table="Commodity_Sell" lazy="extra">
+			<key column="typeid"></key>
+			<one-to-many class="Commodity_Sell" />
+		</set>
+
+	</class>
+
+</hibernate-mapping>

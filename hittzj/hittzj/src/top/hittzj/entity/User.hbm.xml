@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="top.hittzj.entity">
+	<!-- dynamic-update="true"允许部分修改 -->
+	<class name="User" table="User" dynamic-update="true">
+		<!-- 主键映射 -->
+		<id name="id" column="id">
+			<generator class="native" />
+		</id>
+
+		<property name="count" column="count" type="string" length="10"
+			unique="true" not-null="true"></property>
+		<property name="nickName" column="nickName" type="string"
+			length="8" not-null="true"></property>
+		<property name="psd" column="psd" type="string" length="10"
+			not-null="true"></property>
+		<property name="phone" column="phone" type="string" length="11"
+			not-null="true"></property>
+		<property name="qq" column="qq" type="string" length="11"
+			not-null="true"></property>
+		<property name="answer" column="answer" type="string" length="10"
+			not-null="true"></property>
+		<property name="time" column="time" type="timestamp"
+			not-null="true"></property>
+
+
+		<!-- 密保映射 -->
+		<many-to-one name="question" column="quesid" class="Question" lazy="false"></many-to-one>
+
+		<!-- 个人要卖 -->
+		<list name="commodity_Sells" table="Commodity_Sell">
+			<key column="userid"></key>
+			<list-index column="id"></list-index>
+			<one-to-many class="Commodity_Sell" />
+		</list>
+
+		<!-- 个人求购 -->
+		<list name="commodity_Needs" table="Commodity_Need">
+			<key column="userid"></key>
+			<list-index column="id"></list-index>
+			<one-to-many class="Commodity_Need" />
+		</list>
+
+		<!-- 收藏的寄卖买 -->
+		<set name="collectCommodity_Sells" table="User_CS" lazy="false">
+			<key column="uid" />
+			<many-to-many column="csid" class="Commodity_Sell"></many-to-many>
+		</set>
+		<!-- 收藏的求购 -->
+		<set name="collectCommodity_Needs" table="User_CN" lazy="false">
+			<key column="uid" />
+			<many-to-many column="cnid" class="Commodity_Need"></many-to-many>
+		</set>
+	</class>
+</hibernate-mapping>

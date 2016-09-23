@@ -28,9 +28,8 @@ public class ShowCNServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// 得到接下来要去哪一页
-//		System.out.println("begin+++++++++++");
 		String nextPage_ = request.getParameter("nextPage");
-		if (nextPage_ == null) {
+		if (nextPage_ == null||"".equals(nextPage_)) {
 			nextPage_ = "1";
 		}
 		int nextPage = Integer.parseInt(nextPage_);
